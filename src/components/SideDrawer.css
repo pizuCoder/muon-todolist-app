@@ -1,0 +1,30 @@
+.side-drawer {
+    width: 300px;
+    height: 100vh;
+    background-color: #0f0f0f;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .side-drawer.open {
+    left: 0;
+  }
+  
+  .toggle-button {
+    margin: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
