@@ -9,7 +9,7 @@ interface SectionProps {
 
   const Section: React.FC<SectionProps> = ({ name, onEditSection, onDeleteSection, onSelectSection }) => {
     return (
-      <div className="section" onClick={onSelectSection} style={{cursor:"pointer"}}>
+      <div className="section" onClick={onSelectSection} style={{cursor:"pointer", padding: '1rem'}}>
         <p className="section-name">{name}</p>
         <button className="edit-button" onClick={onEditSection}>Edit</button>
         <button className="delete-button" onClick={onDeleteSection}>Delete</button>

@@ -6,16 +6,17 @@ import displayPicture from "../assets/displaypicture.png";
 import homeIcon from "../assets/homeIcon.png";
 import SectionButton from "./addSection";
 import Section from "./Section";
-import SectionNav from "./SectionNav";
+
 
 interface SideDrawerProps {
   isOpen: boolean;
   onToggleDrawer: () => void;
+  handleSectionClick: (section: string) => void;
 }
 
-const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onToggleDrawer }) => {
+const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onToggleDrawer, handleSectionClick }) => {
   const [sections, setSections] = useState<string[]>([]);
-  const [selectedSection, setSelectedSection] = useState<string>("");
+  // const [selectedSection, setSelectedSection] = useState<string>("");
 
   function closeBtn(): void {
     onToggleDrawer();
@@ -41,9 +42,9 @@ const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onToggleDrawer }) => {
     setSections(updatedSections);
   };
 
-  const handleSectionClick = (section: string) => {
-    setSelectedSection(section);
-  };
+  // const handleSectionClick = (section: string) => {
+  //   setSelectedSection(section);
+  // };
 
   return (
     <>
@@ -79,6 +80,7 @@ const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onToggleDrawer }) => {
           />
         ))}
       </div>
+      
     </>
   );
 };
